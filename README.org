@@ -1,11 +1,11 @@
-*Project description
+* Project description
 
 
 
-*Reference
--https://aws.amazon.com/elasticmapreduce/details/hadoop/
--https://aws.amazon.com/elasticmapreduce/
--https://aws.amazon.com/getting-started/launch-a-virtual-machine-B-0-video/launch-a-virtual-machine-B-1/
--http://aws.amazon.com/blogs/aws/hue-web-ui-for-emr/
--https://hive.apache.org/
--https://pig.apache.org/
+* Reference
+- https://aws.amazon.com/elasticmapreduce/details/hadoop/
+- https://aws.amazon.com/elasticmapreduce/
+- https://aws.amazon.com/getting-started/launch-a-virtual-machine-B-0-video/launch-a-virtual-machine-B-1/
+- http://aws.amazon.com/blogs/aws/hue-web-ui-for-emr/
+- https://hive.apache.org/
+- https://pig.apache.org/
