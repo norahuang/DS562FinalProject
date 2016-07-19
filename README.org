@@ -10,5 +10,5 @@
 - https://hive.apache.org/
 - https://pig.apache.org/
 
-＊ Dataset
+* Dataset
 http://tools.pacificclimate.org/dataportal/pcds/map/
