@@ -9,11 +9,8 @@
 - http://aws.amazon.com/blogs/aws/hue-web-ui-for-emr/
 - https://hive.apache.org/
 - https://pig.apache.org/
-<<<<<<< HEAD
 - http://gethue.com/hadoop-tutorial-how-to-create-a-real-hadoop-cluster-in-10-minutes/
 - https://aws.amazon.com/lambda/?nc2=h_m1
-=======
 
 * Dataset
 http://tools.pacificclimate.org/dataportal/pcds/map/
->>>>>>> ba87ecd86fd02e2e92a7ae88ea7a178d7cacfe4e
