@@ -1,0 +1,171 @@
+Apache Pig version 0.14.0-amzn-0 (r: unknown) 
+compiled Jul 08 2016, 02:23:34
+
+Run pig script using PigRunner.run() for Pig version 0.8+
+2016-08-09 21:01:02,641 [uber-SubtaskRunner] INFO  org.apache.pig.Main  - Apache Pig version 0.14.0-amzn-0 (r: unknown) compiled Jul 08 2016, 02:23:34
+2016-08-09 21:01:02,642 [uber-SubtaskRunner] INFO  org.apache.pig.Main  - Logging error messages to: /mnt1/yarn/usercache/NoraHuang/appcache/application_1470773864484_0022/container_1470773864484_0022_01_000001/pig-job_1470773864484_0022.log
+2016-08-09 21:01:02,746 [uber-SubtaskRunner] INFO  org.apache.pig.Main  - Final script path: /mnt1/yarn/usercache/NoraHuang/appcache/application_1470773864484_0022/container_1470773864484_0022_01_000001/script.pig
+2016-08-09 21:01:02,754 [uber-SubtaskRunner] INFO  org.apache.pig.impl.util.Utils  - Default bootup file /var/lib/hadoop-yarn/.pigbootup not found
+2016-08-09 21:01:02,891 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2016-08-09 21:01:02,891 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - fs.default.name is deprecated. Instead, use fs.defaultFS
+2016-08-09 21:01:02,891 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine  - Connecting to hadoop file system at: hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020
+2016-08-09 21:01:02,903 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine  - Connecting to map-reduce job tracker at: ip-172-31-9-236.us-west-2.compute.internal:8032
+2016-08-09 21:01:03,520 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - fs.default.name is deprecated. Instead, use fs.defaultFS
+logs_replace: {date: chararray,one_day_precipitation: float,max_temp: float,min_temp: float}
+logs_no_null: {date: chararray,one_day_precipitation: float,max_temp: float,min_temp: float}
+logs_group: {group: chararray,logs_no_null: {(date: chararray,one_day_precipitation: float,max_temp: float,min_temp: float)}}
+2016-08-09 21:01:03,881 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - fs.default.name is deprecated. Instead, use fs.defaultFS
+2016-08-09 21:01:03,915 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.textoutputformat.separator is deprecated. Instead, use mapreduce.output.textoutputformat.separator
+2016-08-09 21:01:03,957 [uber-SubtaskRunner] INFO  org.apache.pig.tools.pigstats.ScriptState  - Pig features used in the script: GROUP_BY,FILTER
+2016-08-09 21:01:03,984 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - fs.default.name is deprecated. Instead, use fs.defaultFS
+2016-08-09 21:01:03,987 [uber-SubtaskRunner] INFO  org.apache.pig.data.SchemaTupleBackend  - Key [pig.schematuple] was not set... will not generate code.
+2016-08-09 21:01:04,035 [uber-SubtaskRunner] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer  - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+2016-08-09 21:01:04,209 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler  - File concatenation threshold: 100 optimistic? false
+2016-08-09 21:01:04,231 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.util.CombinerOptimizerUtil  - Choosing to move algebraic foreach to combiner
+2016-08-09 21:01:04,269 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer  - MR plan size before optimization: 1
+2016-08-09 21:01:04,269 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer  - MR plan size after optimization: 1
+2016-08-09 21:01:04,295 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - fs.default.name is deprecated. Instead, use fs.defaultFS
+2016-08-09 21:01:04,315 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:04,391 [uber-SubtaskRunner] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState  - Pig script settings are added to the job
+2016-08-09 21:01:04,399 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2016-08-09 21:01:04,399 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2016-08-09 21:01:04,399 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.output.compress is deprecated. Instead, use mapreduce.output.fileoutputformat.compress
+2016-08-09 21:01:07,558 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Reduce phase detected, estimating # of required reducers.
+2016-08-09 21:01:07,560 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Using reducer estimator: org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator
+2016-08-09 21:01:07,792 [communication thread] INFO  org.apache.hadoop.mapred.TaskAttemptListenerImpl  - Progress of TaskAttempt attempt_1470773864484_0022_m_000000_0 is : 1.0
+2016-08-09 21:01:07,828 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator  - BytesPerReducer=1000000000 maxReducers=999 totalInputFileSize=5185272
+2016-08-09 21:01:07,829 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Setting Parallelism to 1
+2016-08-09 21:01:07,829 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+2016-08-09 21:01:07,829 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - This job cannot be converted run in-process
+2016-08-09 21:01:07,853 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Jar file file:/mnt1/yarn/usercache/NoraHuang/appcache/application_1470773864484_0022/container_1470773864484_0022_01_000001/piggybank.jar already in DistributedCache as hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/piggybank.jar. Not copying to hdfs and adding again
+2016-08-09 21:01:07,855 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Jar file file:/mnt1/yarn/filecache/45/pig-0.14.0-amzn-0.jar already in DistributedCache as hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/pig-0.14.0-amzn-0.jar. Not copying to hdfs and adding again
+2016-08-09 21:01:07,856 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Jar file file:/mnt/yarn/filecache/21/automaton-1.11-8.jar already in DistributedCache as hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/automaton-1.11-8.jar. Not copying to hdfs and adding again
+2016-08-09 21:01:07,858 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Jar file file:/mnt1/yarn/filecache/41/antlr-runtime-3.4.jar already in DistributedCache as hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/antlr-runtime-3.4.jar. Not copying to hdfs and adding again
+2016-08-09 21:01:07,860 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Jar file file:/usr/lib/hadoop/lib/guava-11.0.2.jar already in DistributedCache as hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/guava-11.0.2.jar. Not copying to hdfs and adding again
+2016-08-09 21:01:07,980 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Added jar file:/usr/lib/hadoop-mapreduce/joda-time-2.8.1.jar to DistributedCache through /tmp/temp557588677/tmp-2058196292/joda-time-2.8.1.jar
+2016-08-09 21:01:08,078 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler  - Setting up single store job
+2016-08-09 21:01:08,085 [uber-SubtaskRunner] INFO  org.apache.pig.data.SchemaTupleFrontend  - Key [pig.schematuple] is false, will not generate code.
+2016-08-09 21:01:08,085 [uber-SubtaskRunner] INFO  org.apache.pig.data.SchemaTupleFrontend  - Starting process to move generated code to distributed cacche
+2016-08-09 21:01:08,085 [uber-SubtaskRunner] INFO  org.apache.pig.data.SchemaTupleFrontend  - Setting key [pig.schematuple.classes] with classes to deserialize []
+2016-08-09 21:01:08,239 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - 1 map-reduce job(s) waiting for submission.
+2016-08-09 21:01:08,240 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.job.tracker.http.address is deprecated. Instead, use mapreduce.jobtracker.http.address
+2016-08-09 21:01:08,240 [uber-SubtaskRunner] INFO  org.apache.hadoop.conf.Configuration.deprecation  - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2016-08-09 21:01:08,244 [JobControl] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:08,290 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation  - fs.default.name is deprecated. Instead, use fs.defaultFS
+2016-08-09 21:01:08,323 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader  - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-08-09 21:01:08,682 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat  - Total input paths to process : 80
+2016-08-09 21:01:08,682 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil  - Total input paths to process : 80
+2016-08-09 21:01:08,697 [JobControl] ERROR com.hadoop.compression.lzo.GPLNativeCodeLoader  - Could not load native gpl library
+java.lang.UnsatisfiedLinkError: no gplcompression in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1889)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:849)
+	at java.lang.System.loadLibrary(System.java:1088)
+	at com.hadoop.compression.lzo.GPLNativeCodeLoader.<clinit>(GPLNativeCodeLoader.java:32)
+	at com.hadoop.compression.lzo.LzoCodec.<clinit>(LzoCodec.java:71)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:278)
+	at org.apache.hadoop.conf.Configuration.getClassByNameOrNull(Configuration.java:2134)
+	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2099)
+	at org.apache.hadoop.io.compress.CompressionCodecFactory.getCodecClasses(CompressionCodecFactory.java:132)
+	at org.apache.hadoop.io.compress.CompressionCodecFactory.<init>(CompressionCodecFactory.java:179)
+	at org.apache.hadoop.mapreduce.lib.input.TextInputFormat.isSplitable(TextInputFormat.java:58)
+	at org.apache.hadoop.mapreduce.lib.input.FileInputFormat.getSplits(FileInputFormat.java:364)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigInputFormat.getSplits(PigInputFormat.java:265)
+	at org.apache.hadoop.mapreduce.JobSubmitter.writeNewSplits(JobSubmitter.java:301)
+	at org.apache.hadoop.mapreduce.JobSubmitter.writeSplits(JobSubmitter.java:318)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:196)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1290)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1287)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1287)
+	at org.apache.hadoop.mapreduce.lib.jobcontrol.ControlledJob.submit(ControlledJob.java:335)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.pig.backend.hadoop23.PigJobControl.submit(PigJobControl.java:128)
+	at org.apache.pig.backend.hadoop23.PigJobControl.run(PigJobControl.java:194)
+	at java.lang.Thread.run(Thread.java:745)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher$1.run(MapReduceLauncher.java:276)
+2016-08-09 21:01:08,699 [JobControl] ERROR com.hadoop.compression.lzo.LzoCodec  - Cannot load native-lzo without native-hadoop
+2016-08-09 21:01:08,734 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil  - Total input paths (combined) to process : 1
+2016-08-09 21:01:08,792 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter  - number of splits:1
+2016-08-09 21:01:08,919 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter  - Submitting tokens for job: job_1470773864484_0023
+2016-08-09 21:01:08,919 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter  - Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 22 cluster_timestamp: 1470773864484 } attemptId: 1 } keyId: -1794656603)
+2016-08-09 21:01:08,919 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter  - Kind: RM_DELEGATION_TOKEN, Service: 172.31.9.236:8032, Ident: (owner=NoraHuang, renewer=oozie mr token, realUser=oozie, issueDate=1470776454823, maxDate=1471381254823, sequenceNumber=74, masterKeyId=2)
+2016-08-09 21:01:08,963 [JobControl] INFO  org.apache.hadoop.mapred.YARNRunner  - Job jar is not present. Not adding any jar to the list of resources.
+2016-08-09 21:01:09,283 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/apacheds-i18n-2.0.0-M15.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/apacheds-i18n-2.0.0-M15.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,284 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/apacheds-kerberos-codec-2.0.0-M15.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/apacheds-kerberos-codec-2.0.0-M15.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,285 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/api-asn1-api-1.0.0-M20.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/api-asn1-api-1.0.0-M20.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,286 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/api-util-1.0.0-M20.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/api-util-1.0.0-M20.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,287 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/commons-codec-1.4.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/commons-codec-1.4.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,288 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/commons-logging-1.1.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/commons-logging-1.1.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,289 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/curator-client-2.7.1.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/curator-client-2.7.1.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,290 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/curator-framework-2.7.1.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/curator-framework-2.7.1.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,291 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/guava-11.0.2.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/guava-11.0.2.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,292 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/hadoop-auth-2.7.2-amzn-3.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/hadoop-auth-2.7.2-amzn-3.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,293 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/httpclient-4.3.4.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/httpclient-4.3.4.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,294 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/httpcore-4.1.2.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/httpcore-4.1.2.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,295 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/json-simple-1.1.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/json-simple-1.1.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,299 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/slf4j-api-1.6.6.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/slf4j-api-1.6.6.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,300 [JobControl] WARN  org.apache.hadoop.mapreduce.v2.util.MRApps  - cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/pig/zookeeper-3.4.8.jar conflicts with cache file (mapreduce.job.cache.files) hdfs://ip-172-31-9-236.us-west-2.compute.internal:8020/user/oozie/share/lib/lib_20160809202254/oozie/zookeeper-3.4.8.jar This will be an error in Hadoop 2.0
+2016-08-09 21:01:09,341 [JobControl] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl  - Submitted application application_1470773864484_0023
+2016-08-09 21:01:09,360 [JobControl] INFO  org.apache.hadoop.mapreduce.Job  - The url to track the job: http://ip-172-31-9-236.us-west-2.compute.internal:20888/proxy/application_1470773864484_0023/
+2016-08-09 21:01:09,360 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - HadoopJobId: job_1470773864484_0023
+2016-08-09 21:01:09,361 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - Processing aliases logs_avg,logs_base,logs_group,logs_no_null,logs_replace,raw_logs
+2016-08-09 21:01:09,361 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - detailed locations: M: raw_logs[16,11],logs_base[-1,-1],logs_no_null[49,15],logs_replace[37,1],logs_avg[59,1],logs_group[54,13] C: logs_avg[59,1],logs_group[54,13] R: logs_avg[59,1]
+2016-08-09 21:01:09,367 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - 0% complete
+2016-08-09 21:01:09,367 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - Running jobs are [job_1470773864484_0023]
+2016-08-09 21:01:31,558 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - 26% complete
+2016-08-09 21:01:31,558 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - Running jobs are [job_1470773864484_0023]
+Heart beat
+2016-08-09 21:01:33,561 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - 50% complete
+2016-08-09 21:01:33,561 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - Running jobs are [job_1470773864484_0023]
+2016-08-09 21:01:37,835 [communication thread] INFO  org.apache.hadoop.mapred.TaskAttemptListenerImpl  - Progress of TaskAttempt attempt_1470773864484_0022_m_000000_0 is : 1.0
+2016-08-09 21:01:39,569 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - Running jobs are [job_1470773864484_0023]
+2016-08-09 21:01:44,580 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:44,591 [uber-SubtaskRunner] INFO  org.apache.hadoop.mapred.ClientServiceDelegate  - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-08-09 21:01:44,683 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:44,687 [uber-SubtaskRunner] INFO  org.apache.hadoop.mapred.ClientServiceDelegate  - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-08-09 21:01:44,736 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:44,740 [uber-SubtaskRunner] INFO  org.apache.hadoop.mapred.ClientServiceDelegate  - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-08-09 21:01:44,793 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - 100% complete
+2016-08-09 21:01:44,795 [uber-SubtaskRunner] INFO  org.apache.pig.tools.pigstats.mapreduce.SimplePigStats  - Script Statistics: 
+
+HadoopVersion	PigVersion	UserId	StartedAt	FinishedAt	Features
+2.7.2-amzn-3	0.14.0-amzn-0	yarn	2016-08-09 21:01:04	2016-08-09 21:01:44	GROUP_BY,FILTER
+
+Success!
+
+Job Stats (time in seconds):
+JobId	Maps	Reduces	MaxMapTime	MinMapTime	AvgMapTime	MedianMapTime	MaxReduceTime	MinReduceTime	AvgReduceTime	MedianReducetime	Alias	Feature	Outputs
+job_1470773864484_0023	1	1	14	14	14	14	4	4	4	4	logs_avg,logs_base,logs_group,logs_no_null,logs_replace,raw_logs	GROUP_BY,COMBINER	/user/NoraHuang/ds562_2011_2015,
+
+Input(s):
+Successfully read 142002 records (7190 bytes) from: "s3://ds562finalproject/pacificClimate/2011_2015_MinTemp"
+
+Output(s):
+Successfully stored 60 records (3838 bytes) in: "/user/NoraHuang/ds562_2011_2015"
+
+Counters:
+Total records written : 60
+Total bytes written : 3838
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+
+Job DAG:
+job_1470773864484_0023
+
+
+2016-08-09 21:01:44,802 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:44,805 [uber-SubtaskRunner] INFO  org.apache.hadoop.mapred.ClientServiceDelegate  - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-08-09 21:01:44,838 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:44,842 [uber-SubtaskRunner] INFO  org.apache.hadoop.mapred.ClientServiceDelegate  - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-08-09 21:01:44,872 [uber-SubtaskRunner] INFO  org.apache.hadoop.yarn.client.RMProxy  - Connecting to ResourceManager at ip-172-31-9-236.us-west-2.compute.internal/172.31.9.236:8032
+2016-08-09 21:01:44,875 [uber-SubtaskRunner] INFO  org.apache.hadoop.mapred.ClientServiceDelegate  - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-08-09 21:01:44,910 [uber-SubtaskRunner] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher  - Success!
+2016-08-09 21:01:44,936 [uber-SubtaskRunner] INFO  org.apache.pig.Main  - Pig script completed in 42 seconds and 312 milliseconds (42312 ms)
+Hadoop Job IDs executed by Pig: job_1470773864484_0023
