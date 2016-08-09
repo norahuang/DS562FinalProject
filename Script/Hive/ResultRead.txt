@@ -1,0 +1,1 @@
+SELECT ds562.time, ds562.one_day_precipitation, ds562.max_temp, ds562.min_temp FROM ds562
