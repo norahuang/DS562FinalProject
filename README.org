@@ -1,5 +1,8 @@
 * Project description
-
+This project Analysis BC climate data with Amazon Web service.
+We create a EMR cluster with core and node servers.
+The key technologies of this project are HUE, Hadoop, Hive and Pig.
+Detail can be found in the paper.
 
 
 * Reference
