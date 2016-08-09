@@ -1,0 +1,70 @@
+--
+-- setup piggyback functions
+--
+REGISTER piggybank.jar
+DEFINE EXTRACT org.apache.pig.piggybank.evaluation.string.EXTRACT;
+DEFINE FORMAT org.apache.pig.piggybank.evaluation.string.FORMAT;
+DEFINE REPLACE org.apache.pig.piggybank.evaluation.string.REPLACE;
+DEFINE DATE_TIME org.apache.pig.piggybank.evaluation.datetime.DATE_TIME;
+DEFINE FORMAT_DT org.apache.pig.piggybank.evaluation.datetime.FORMAT_DT;
+
+
+
+--
+-- import logs and break into tuples
+--
+raw_logs =
+  -- load the weblogs into a sequence of one element tuples
+  LOAD 's3://ds562finalproject/PacificClimate/2014_2015_MinTemp/' USING TextLoader AS (line:chararray);
+
+logs_base =
+  -- for each weblog string convert the weblong string into a
+  -- structure with named fields
+  FOREACH
+    raw_logs
+  GENERATE
+   FLATTEN (   	 
+      EXTRACT(
+        line,
+        '^(\\d{4}-\\d{2})-\\d{2} \\d{2}:\\d{2}:\\d{2}, (\\S+), (\\S+), (\\S+)'
+      )
+    )
+    AS (
+      date: chararray, one_day_precipitation: chararray, max_temp: chararray, min_temp: chararray
+    )
+  ;
+
+
+logs_replace =
+	FOREACH 
+   	 logs_base
+    GENERATE        
+        date,
+        (float)REPLACE(one_day_precipitation, 'None', '0.0') AS one_day_precipitation,
+        (float)REPLACE(max_temp, 'None', '0.0') AS max_temp,
+        (float)REPLACE(min_temp, 'None', '0.0') AS min_temp
+  ; 
+  
+describe logs_replace;
+
+logs_no_null = FILTER logs_replace BY date is not null; 
+      
+describe logs_no_null;
+
+
+logs_group = GROUP logs_no_null BY date;
+
+describe logs_group;
+
+logs_avg = 
+	FOREACH 
+   	 logs_group
+    GENERATE
+      group,
+      AVG(logs_no_null.one_day_precipitation),
+      AVG(logs_no_null.max_temp),
+      AVG(logs_no_null.min_temp)
+;
+
+   	
+store logs_avg into '/user/NoraHuang/ds562’;
