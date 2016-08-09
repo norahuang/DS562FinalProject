@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{b2016professionalhadoop}
+A.~B.
+\newblock {\em Professional hadoop}.
+\newblock US: Wrox Press Ltd, 2016.
+
+\bibitem{dean2008mapreduce}
+J.~Dean and S.~Ghemawat.
+\newblock Mapreduce: simplified data processing on large clusters.
+\newblock {\em Communications of the ACM}, 51(1):107--113, 2008.
+
+\bibitem{gates2009building}
+A.~F. Gates, O.~Natkovich, S.~Chopra, P.~Kamath, S.~M. Narayanamurthy,
+  C.~Olston, B.~Reed, S.~Srinivasan, and U.~Srivastava.
+\newblock Building a high-level dataflow system on top of map-reduce: the pig
+  experience.
+\newblock {\em Proceedings of the VLDB Endowment}, 2(2):1414--1425, 2009.
+
+\bibitem{rasheed2013fedora}
+A.~Rasheed and M.~Mohideen.
+\newblock Fedora commons with apache hadoop: A research study.
+\newblock 2013.
+
+\bibitem{shvachko2010hadoop}
+K.~Shvachko, H.~Kuang, S.~Radia, and R.~Chansler.
+\newblock The hadoop distributed file system.
+\newblock In {\em 2010 IEEE 26th symposium on mass storage systems and
+  technologies (MSST)}. IEEE, 2010.
+
+\bibitem{thusoo2009hive}
+A.~Thusoo, J.~S. Sarma, N.~Jain, Z.~Shao, P.~Chakka, S.~Anthony, H.~Liu,
+  P.~Wyckoff, and R.~Murthy.
+\newblock Hive: a warehousing solution over a map-reduce framework.
+\newblock {\em Proceedings of the VLDB Endowment}, 2(2):1626--1629, 2009.
+
+\end{thebibliography}
