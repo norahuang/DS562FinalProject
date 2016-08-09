@@ -1,14 +1,15 @@
-\BOOKMARK [1][-]{section.1}{Related work}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{MapReduce}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Hadoop Distributed File System}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Pig}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{Hive}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{Hue}{section.1}% 6
-\BOOKMARK [1][-]{section.2}{Project}{}% 7
-\BOOKMARK [2][-]{subsection.2.1}{ Dataset}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.2}{Scripts}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{Implementation}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{Results and analysis}{}% 11
-\BOOKMARK [1][-]{section.4}{Conclusions}{}% 12
-\BOOKMARK [1][-]{section.5}{Future Work}{}% 13
-\BOOKMARK [1][-]{section*.1}{References}{}% 14
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related work}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{MapReduce}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Hadoop Distributed File System}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Pig}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Hive}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Hue}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Project}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{ Dataset}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Scripts}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Implementation}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Results and analysis}{}% 12
+\BOOKMARK [1][-]{section.5}{Conclusions}{}% 13
+\BOOKMARK [1][-]{section.6}{Future Work}{}% 14
+\BOOKMARK [1][-]{section*.3}{References}{}% 15

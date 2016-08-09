@@ -22,7 +22,14 @@ The dataset is divided by time and stations. The station is the exact location w
 The dataset will allow us to understand the climate change among time and regions (stations). The resulting analysis of the dataset might help for trend analysis and climate change researches. This information can be used as an input for more complex climate models in order to have accurate climate predictions.
 
 \subsection{Scripts}
-To add ...
+The project implementation begins by using two customised scripts for the Hive and Pig process, the first script is for getting the data and the second is for storing and doing some computations. 
+\subsubsection*{Pig script} To add ...
+\subsubsection*{Hive script}
+This script uses sql command for selecting the data form the Hadoop Distributed File System. The script only select the require information for doing the posterior computations for analyzing of the data. 
+\begin{lstlisting}
+SELECT ds562.time, ds562.one_day_precipitation, ds562.max_temp, ds562.min_temp 
+FROM ds562
+\end{lstlisting}
 
 \subsection{Implementation}
 To add ...
