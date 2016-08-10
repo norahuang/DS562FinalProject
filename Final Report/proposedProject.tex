@@ -32,23 +32,29 @@ FROM ds562
 \end{lstlisting}
 
 \subsection{Implementation}
-To add ...
-In this section we present our implementation of the project.  
+We setup a EMR cluster on Amazon Web Service.
+The cluster is consist of 3 nodes, 1 mater and 2 core(workersw). All nodes are running Lastest Ubuntu as its operating system while installed Hadoop, Hue, Hive and Pig by default.
+Hue is stalled on master node while the other 3 are achitectures involved both master and core nodes.
+So we do not need to do extra configuration or application installation for our data analysis.
+The raw climate data are uploaded onto S3. And all output and logs are also stored in S3.
+The archtecure of the system are shown in fig1 and fig 2. fig1 shows the data process path of Pig while fig2 shows the data process path of Hive.
+We use Pig to load raw data from S3, and then caculate the average values of each columns and stored them in HDFS format.
+After the processed data are in HDFS, we can use Hive which provides SQL executor to access the data.
+Hue is a web page that providing interface for Pig and Hive. 
 
-Pig To add ...
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=1\columnwidth]{/Users/MariaFerman/Desktop/DC_FinalProject/images/PigDiagram}
+		\includegraphics[width=1\columnwidth]{../images/PigDiagram}
 		\caption{Pig Diagram}
 		\label{fig:dataDiagr}
 	\end{center}
 	\vspace{-10pt}
 \end{figure}
 
-Hive To add ...
+
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=1\columnwidth]{/Users/MariaFerman/Desktop/DC_FinalProject/images/HiveDiagram-2}
+		\includegraphics[width=1\columnwidth]{../images/HiveDiagram-2}
 		\caption{Hive Diagram}
 		\label{fig:dataDiagr}
 	\end{center}

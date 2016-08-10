@@ -1,0 +1,64 @@
+%!TEX root = DMmidterm.tex
+
+
+\section{Evaluation}
+\label{sec:evaluation}
+
+\subsection{Pricing}
+In our project the data is no more than 1GB. And we use 3 m3.xlarge nodes in our cluster each of which cost \$0.336 per hour.
+The detail of pricing can be found in Table~\ref{table1} and Table~\ref{table2}
+
+\begin{table}[]
+\centering
+\caption{S3 Storage Pricing}\label{table1}
+\begin{tabular}{|l|l|l|l|}
+\hline
+/month       & \begin{tabular}[c]{@{}l@{}}Standard \\ Storage\\ per GB\end{tabular} & \begin{tabular}[c]{@{}l@{}}Standard- \\ Infrequent\\ Access \\ Storage †    \\ per GB\end{tabular} & \begin{tabular}[c]{@{}l@{}}Glacier \\ Storage\\ per GB\end{tabular} \\ \hline
+First 1 TB   & \$0.0300                                                             & \$0.0125                                                                                           & \$0.007                                                             \\ \hline
+Next 49 TB   & \$0.0295                                                             & \$0.0125                                                                                           & \$0.007                                                             \\ \hline
+Next 450 TB  & \$0.0290                                                             & \$0.0125                                                                                           & \$0.007                                                             \\ \hline
+Next 500 TB  & \$0.0285                                                             & \$0.0125                                                                                           & \$0.007                                                             \\ \hline
+Next 4000 TB & \$0.0280                                                             & \$0.0125                                                                                           & \$0.007                                                             \\ \hline
+Over 5000 TB & \$0.0275                                                             & \$0.0125                                                                                           & \$0.007                                                             \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\caption{Pricing for Amazon EMR and Amazon EC2
+	General Purpose - Current Generation}\label{table2}
+\begin{tabular}{|l|l|l|}
+\hline
+& \begin{tabular}[c]{@{}l@{}}Amazon EC2\\ per Hour\end{tabular} & \begin{tabular}[c]{@{}l@{}}Amazon Elastic MapReduce\\ per Hour\end{tabular} \\ \hline
+m3.xlarge   & \$0.266                                                       & \$0.070                                                                     \\ \hline
+m3.2xlarge  & \$0.532                                                       & \$0.140                                                                     \\ \hline
+m4.large    & \$0.12                                                        & \$0.030                                                                     \\ \hline
+m4.xlarge   & \$0.239                                                       & \$0.060                                                                     \\ \hline
+m4.2xlarge  & \$0.479                                                       & \$0.120                                                                     \\ \hline
+m4.4xlarge  & \$0.958                                                       & \$0.240                                                                     \\ \hline
+m4.10xlarge & \$2.394                                                       & \$0.270                                                                     \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{performance}
+Since Pig is the most time consuming process in our data analysis, we only evaluate processing time of Pig. 
+Hive take almost no time when access the processed data by Pig.
+We configure 1 m3.xlarge as master and 2 m3.xlarge as core. And execute the Pig Script on 1 year, 3 years, 5 years and 10 years data.
+Table~\ref{table3} demonstrate our measurement.
+
+\begin{table}[]
+	\centering
+	\caption{Hive Processing Time}
+	\label{table3}
+	\begin{tabular}{|l|l|}
+		\hline
+		\begin{tabular}[c]{@{}l@{}}Data Volume\\ year(s)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Processing Time\\ ms\end{tabular} \\ \hline
+		1                                                             & 37536                                                      \\ \hline
+		3                                                             & 41908                                                      \\ \hline
+		5                                                             & 42312                                                       \\ \hline
+		10                                                            & 42054                                                      \\ \hline
+	\end{tabular}
+\end{table}
+
+
