@@ -1,3 +1,0 @@
-* Launch an Amazon EC2 Instance
-- https://aws.amazon.com/getting-started/launch-a-virtual-machine-B-0/
- 
