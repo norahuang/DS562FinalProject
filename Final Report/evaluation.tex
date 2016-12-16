@@ -5,28 +5,34 @@
 \label{sec:evaluation}
 \subsection{Qualitatively}
 \subsubsection*{Easy to Use}
-You can launch an Amazon EMR cluster in minutes. You don’t need to worry about node provisioning, cluster setup, Hadoop configuration, or cluster tuning. Amazon EMR takes care of these tasks so you can focus on analysis.
+You can launch an Amazon EMR cluster in minutes. You dont need to worry about node provisioning, cluster setup, Hadoop configuration, or cluster tuning. Amazon EMR takes care of these tasks so you can focus on analysis.
 
 \subsubsection*{Predictable cost}
 Amazon EMR pricing is simple and predictable: You pay an hourly rate for every instance hour you use. You can launch a 10-node Hadoop cluster for as little as \$0.15 per hour. Because Amazon EMR has native support for Amazon EC2 Spot and Reserved Instances, you can also save 50-80\% on the cost of the underlying instances.
 
 \subsubsection*{Elastic}
-With Amazon EMR, you can provision one, hundreds, or thousands of compute instances to process data at any scale. You can easily increase or decrease the number of instances and you only pay for what you use. 
+With Amazon EMR, you can provision one, hun- dreds, or thousands of compute instances to process data at any scale. You can easily increase or decrease the number of instances and you only pay for what you use.
 
 \subsubsection*{Reliable}
-You can spend less time tuning and monitoring your cluster. Amazon EMR has tuned Hadoop for the cloud; it also monitors your cluster —retrying failed tasks and automatically replacing poorly performing instances.
+You can spend less time tuning and monitoring your cluster. Amazon EMR has tuned Hadoop for the cloud; it also monitors your cluster retrying failed tasks and automat- ically replacing poorly performing instances.
 
 \subsubsection*{Flexible}
 You have complete control over your cluster. You have root access to every instance, you can easily install additional applications, and you can customize every cluster. Amazon EMR also supports multiple Hadoop distributions and applications.
 
 You can enjoy lots of features and benefits when you are using AWS EMR, however, graphical interface provided by Hue is limit, there are only several simple charts that it can display base on your data. And it is not user configurable. If you want a new chart type, you may need to change the source code of Hue. The good thing is that Hue is an open source project which you can access it source code and contribute on it easily.
 
+%!!!!!!!!!!
 \subsection{Quantitatively}
-This section provides some pricing statistic and performance measurement on AWS EMR. 
+This section provides some pricing statistic and performance measurement on AWS EMR.
 
 \subsubsection*{Pricing}
-In our project the data is no more than 1GB. And we use 3 m3.xlarge nodes in our cluster each of which cost \$0.336 per hour.
+In our project the data is no more than 1GB. And we use 3 m3.xlarge nodes in our cluster each of which cost \$0.336 per hour. 
 The detail of pricing can be found in Table~\ref{table1} and Table~\ref{table2}
+
+\subsubsection*{Performance}
+Since Pig is the most time consuming process in our data analysis, we only evaluate processing time of Pig. Hive take almost no time when access the processed data by Pig. We configure 1 m3.xlarge as master and 2 m3.xlarge as core. And execute the Pig Script on 1 year, 3 years, 5 years and 10 years data. 
+Table~\ref{table3} demonstrate our measurement.
+
 
 \begin{table}[]
 \centering
@@ -61,15 +67,12 @@ m4.10xlarge & \$2.394                                                       & \$
 \end{tabular}
 \end{table}
 
-\subsubsection*{performance}
-Since Pig is the most time consuming process in our data analysis, we only evaluate processing time of Pig. 
-Hive take almost no time when access the processed data by Pig.
-We configure 1 m3.xlarge as master and 2 m3.xlarge as core. And execute the Pig Script on 1 year, 3 years, 5 years and 10 years data.
-Table~\ref{table3} demonstrate our measurement.
+
+
 
 \begin{table}[]
 	\centering
-	\caption{Hive Processing Time}
+	\caption{Pig Processing Time}
 	\label{table3}
 	\begin{tabular}{|l|l|}
 		\hline
@@ -80,5 +83,3 @@ Table~\ref{table3} demonstrate our measurement.
 		10                                                            & 42054                                                      \\ \hline
 	\end{tabular}
 \end{table}
-
-

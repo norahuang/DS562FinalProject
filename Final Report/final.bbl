@@ -1,5 +1,15 @@
 \begin{thebibliography}{1}
 
+\bibitem{ams2016emr}
+I.~Amazon Web~Services.
+\newblock Amazon emr.
+\newblock 2016.
+
+\bibitem{aws2016S3}
+I.~Amazon Web~Services.
+\newblock Amazon s3.
+\newblock 2016.
+
 \bibitem{b2016professionalhadoop}
 A.~B.
 \newblock {\em Professional hadoop}.
